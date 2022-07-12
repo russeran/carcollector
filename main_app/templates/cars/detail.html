@@ -9,6 +9,10 @@
         <h3>{{car.year}}</h3>
         <h3>{{car.price}}</h3>
     </div>
+    <div class="card-action">
+        <a href="{% url 'cars_update' car.id %}">Edit</a>
+        <a href="{% url 'cars_delete' car.id %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}
