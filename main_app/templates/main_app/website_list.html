@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Website List</h1>
+
+{% for website in website_list %}
+  <a href="{% url 'websites_detail' website.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ website.name }}</span>
+          
+            <a href="{{ website.link }}">
+                <button class="btn waves-effect waves-light">
+                    View
+                </button>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
